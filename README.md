@@ -65,5 +65,9 @@ P={0: {0: [(1.0, 0, 0.0, True)],
 Thus the given Markov Decision Process(MDP) problem is represented in the following ways.
 
 1)Text representation
+
+
 2)Graphical representation
+
+
 3)Python - Dictonary representation
