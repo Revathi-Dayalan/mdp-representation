@@ -2,37 +2,51 @@
 # <p align="center">MDP REPRESENTATION</p>
 
 ## AIM:
-To represent any one real-world problem in MDP form.
+To represent a Markov Decision Process(MDP) problem in the following ways.
+
+Text representation
+Graphical representation
+Python - Dictonary representation
 
 ## PROBLEM STATEMENT:
 
-### Problem Description :
-Suicide Pod was launched in Switzerland. Their government is trying to normalise it. Reinforcement learning can be introduced to confirm the efficiency of the pod.
+### Problem Description:
+The problem is to develop a Reinforcement Learning model for product detection in a manufacturing factory. The model should determine whether a product is ready to be exported or faulty based on its features. The goal is to optimize the production process and reduce the number of faulty products while maximizing the number of products ready for export.
+
 
 ### State Space :
-{Alive, Rest, Dead}
+{F,J,E} -> {0,1,2}
+
+where,
+
+F -> Faulty
+J-Juction(decision making state)
+E -> Export
 
 ### Sample State :
-Alive
+Dimensions: (Length, Width, Height) = (10 cm, 5 cm, 2 cm). Weight: 100 grams. Color: Blue.
 
 ### Action Space :
-{Releasing right amount of nitrogen, Releasing low nitrogen}
+{F,E} -> {0,1} where, "E->Export" , "F->Mark as Faulty"
+
 
 ### Sample Action : 
-Releasing right amoount of nitrogen
+E-> 1
+product is ready for Export.
 
 ### Reward Function :
-1-right amount of nitrogen, 0-otherwise
+R = { +10 for correctly exporting a ready product, -10 for exporting a faulty product}
+
 
 ### Graphical Representation :
-![image](https://github.com/PrasanthE2001/mdp-representation/assets/114572171/6499f8e0-2fd9-45b2-b5d9-d8b605ffe5d0)
+![image](https://github.com/user-attachments/assets/3ef47dca-cc5b-46c4-8885-f72d3667347d)
 
 
 
 ## PYTHON REPRESENTATION:
-Developed By : **PRASANTH E**
+Developed By : Revathi D
 </br>
-Register No. : **212221233002**
+Register No. : 212221240045
 ```py
 P={0: {0: [(1.0, 0, 0.0, True)],
        1: [(1.0, 0, 0.0, True)]},
@@ -42,7 +56,14 @@ P={0: {0: [(1.0, 0, 0.0, True)],
        1: [(1.0, 2, 0.0, True)]}}
 ```
 ## OUTPUT:
-![image](https://github.com/NITHISHKUMAR-P/mdp-representation/assets/93427017/690df3c9-9d9e-4a32-b420-076aacb656e2)
-
+```
+{0: {0: [(1.0, 0, 0.0, True)], 1: [(1.0, 0, 0.0, True)]},
+ 1: {0: [(1.0, 0, 0.0, True)], 1: [(1.0, 2, 1.0, True)]},
+ 2: {0: [(1.0, 2, 0.0, True)], 1: [(1.0, 2, 0.0, True)]}}
+```
 ## RESULT:
-Thus, a real-world problem is represented in MDP form.
+Thus the given Markov Decision Process(MDP) problem is represented in the following ways.
+
+1)Text representation
+2)Graphical representation
+3)Python - Dictonary representation
